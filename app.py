@@ -17,8 +17,10 @@ company = st.selectbox(
 role = st.text_input("Enter Role")
 
 # Resume upload
-uploaded_file = st.file_uploader("Upload Resume (.txt only)")
-
+uploaded_file = st.file_uploader(
+    "Upload Resume",
+    type=["txt", "pdf"]
+)
 resume = ""
 
 if uploaded_file:
